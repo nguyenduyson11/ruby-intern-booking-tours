@@ -2,7 +2,7 @@ class CreateTours < ActiveRecord::Migration[6.1]
   def change
     create_table :tours do |t|
       t.string :title
-      t.integer :tourtype_id
+      t.integer :tour_type_id
       t.string :location
       t.float :price
       t.integer :day
