@@ -85,6 +85,5 @@ config/settings/*.local.yml
 config/environments/*.local.yml
 
 /config/application.yml
-/.framgia-ci.yml
 /config/database.yml
 /storage
