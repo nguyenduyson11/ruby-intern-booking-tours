@@ -1,0 +1,5 @@
+<% if @book_tour.errors.any? %>
+   alert('<%= @book_tour.errors.full_messages.first %>')
+<% else %>
+   alert('<%= t("booking_sucsses") %>')
+<% end %>

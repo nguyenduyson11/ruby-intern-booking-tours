@@ -1,0 +1,20 @@
+<div class="book_tour_wrap">
+  <h1 class="book_tour_title">
+    <%= t("your_tour") %>
+  </h1>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">STT</th>
+        <th scope="col"><%= t("tour_name") %></th>
+        <th scope="col"><%= t("person") %></th>
+        <th scope="col"><%= t("tour_start") %></th>
+        <th scope="col"><%= t("tour_end") %></th>
+        <th scope="col"><%= t("status") %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= render @book_tours %>
+    </tbody>
+  </table>
+</div>
