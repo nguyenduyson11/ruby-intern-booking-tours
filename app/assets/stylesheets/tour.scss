@@ -1,0 +1,99 @@
+.card_wrapper{
+  display: flex;
+  align-items: center;
+  height: 280px;
+  width: 100%;
+}
+.img_card{
+  width: 190px;
+  height: 210px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+.card_wrap{
+  height: 280px;
+  width: 100%;
+  padding: 0 20px;
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+.card_content {
+  width:100%;
+}
+.card_content h4{
+  font-family: 'Lato', sans-serif;
+  font-size: 24px;
+}
+.card_content p{
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  color: #777;
+}
+.card_content_price{
+  padding: 5px 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+.card_content_price .price_text{
+  font-size: 16px;
+  font-weight: 400;
+  color: #151b1d;
+}
+.card_content_price .price_number{
+  font-size: 16px;
+  font-weight: 600;
+  color: #FF1654;
+}
+.card_content_des{
+  margin-top: 15px;
+  color: #777;
+  white-space: nowrap; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.link_card{
+  text-decoration: none;
+  color: black;
+}
+.link_card:hover{
+  text-decoration: none;
+  color: black;
+}
+.title_support{
+  padding: 10px 0;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #FF1654;
+  font-family: 'Dancing Script', cursive;
+}
+.form_search_tour{
+  text-align: center;
+}
+.form_search_tour .input_location{
+  border: none;
+  background-color: #faf7fe;
+  border-bottom: 1px solid black;
+  font-family: 'Dancing Script', cursive;
+  font-size: 24px;
+}
+.form_search_tour .input_location:focus{
+  border: none;
+  outline: none;
+  border-bottom: 1px solid black;
+  
+}
+.btn_search{
+  padding: 8px 15px;
+  border-radius: 15px;
+  background-color: #faf7fe;
+  border: 1px solid #777;
+  font-family: 'Dancing Script', cursive;
+  transition: 0.5s;
+}
+.btn_search:hover{
+  background-color:#f54ef5;
+  font-size: 26px;
+}
