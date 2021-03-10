@@ -5,7 +5,8 @@ Rails.application.routes.draw do
     get "/login", to: "sessions#new"
     post "/login", to: "sessions#create"
     delete "/logout", to: "sessions#destroy"
-    resources :tours, only: %i("index")
-    resources :users, only: %i("new create ")
+    resources :tour, only: %i(index show )
+    resources :users, only: %i(new create )
+    resources :book_tours, only: %i(create )
   end
 end
