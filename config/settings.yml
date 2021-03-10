@@ -1,0 +1,5 @@
+ user:
+  email:
+    default: "nguyenduyson60@example.com"
+    layout: "mailer"
+    max_length: 255
