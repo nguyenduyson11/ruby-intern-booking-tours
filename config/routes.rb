@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     resources :users, only: %i(new create)
     resources :book_tours, only: %i(index create)
     namespace :admin do
-      resources :book_tours, :index
+      resources :book_tours, only: %i(index update destroy)
     end
   end
 end

@@ -24,4 +24,9 @@ class ApplicationController < ActionController::Base
     flash[:danger] = t "login_message"
     redirect_to login_path
   end
+
+  def paginate model
+    model.paginate(page: params[:page],
+      per_page: params[:per_page] || Settings.user.panigate_size)
+  end
 end

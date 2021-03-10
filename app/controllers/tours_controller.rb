@@ -1,10 +1,7 @@
 class ToursController < ApplicationController
-  before_action :find_tour, only: %i(show)
-
+  before_action :find_tour, only: :show
+  before_action :search, only: :index
   def index
-    @tours = Tour.sort_tours
-                 .paginate(page: params[:page],
-      per_page: params[:per_page] || Settings.user.panigate_size)
     @tourhighlights = Tour.tours_Highlight
   end
 
@@ -20,5 +17,14 @@ class ToursController < ApplicationController
 
     flash[:error] = t "not_find_tour"
     redirect_to root_path
+  end
+
+  def search
+    tours = if params[:key].blank?
+              Tour
+            else
+              Tour.search_tour(params[:key])
+            end.newest
+    @tours = paginate tours
   end
 end

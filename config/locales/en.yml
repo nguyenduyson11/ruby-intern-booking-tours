@@ -38,3 +38,5 @@ en:
   email_remove_booking: "We have deleted your booking"
   booking_tour: "Booking tour"
   hi: "Hi"
+  modal_title: "Notification"
+  close: "Close"

@@ -2,16 +2,19 @@
 <div class="content_wrap">
   <div class="container">
     <h1 class="title_content"><%= t("tour_title") %></h1>
-    <div class="form_search_tour">
-        <input type="text" class="input_location" placeholder=<%= t("tour_placeholder") %>>
-        <button class="btn_search"><%= t("tour_search") %></button>
-    </div>
+    <%= form_tag tours_path, method: "GET", class: "form_search_tour" do %>
+      <%= text_field_tag :key, "", class: 'input_location', placeholder: t("tour_placeholder"), value: params[:key].present? ? params[:key] : "" %>
+      <%= button_tag t("tour_search"), class: "btn_search" %>
+    <% end %>
     <h3 class="title_support">
       <%= t("tour_often") %>
     </h3>
     <div class="row mb-4">
-      <%= render @tours %>
-
+      <% if @tours.size > Settings.min_quantity %>
+        <%= render @tours %>
+      <% else %>
+        <%= t("not_find_tour") %>
+      <% end %>
     </div>
     <p><%= will_paginate @tours %></p>
     <h3 class="title_support">
