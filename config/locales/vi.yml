@@ -1,3 +1,11 @@
 
 vi:
   title: "Web book tour"
+  register_success: "Đăng ký thành công"
+  register_error: "Đăng ký thất bại !"
+  form_message: "Lỗi!"
+  count_err:
+    one: "%{count} Lỗi"
+    other: "%{count} Lỗi"
+  enter_username: "Nhập tài khoản"
+  enter_password: "Nhập mật khẩu"
