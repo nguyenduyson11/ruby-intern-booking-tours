@@ -9,3 +9,8 @@ vi:
     other: "%{count} Lỗi"
   enter_username: "Nhập tài khoản"
   enter_password: "Nhập mật khẩu"
+  home: "Trang chủ"
+  tour: "Tour"
+  about: "Giới thiệu"
+  login: "Đăng nhập"
+  contact: "Liên lạc"

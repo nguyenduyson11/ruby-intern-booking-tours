@@ -9,3 +9,8 @@ en:
     other: "%{count} errors"
   enter_username: "Enter username"
   enter_password: "Enter password"
+  home: "Home"
+  tour: "Tour"
+  about: "About"
+  login: "Login"
+  contact: "Contact"

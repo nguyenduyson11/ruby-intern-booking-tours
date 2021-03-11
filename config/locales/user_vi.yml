@@ -6,3 +6,6 @@ vi:
   password_confirmation: "Xác nhận mật khẩu"
   phone: "0854 083 118"
   register: "Đăng ký"
+  login: "Đăng nhập"
+  login_fail: "Tài khoản hoặc mật khẩu sai"
+  login_true: "Đăng nhập thành công"

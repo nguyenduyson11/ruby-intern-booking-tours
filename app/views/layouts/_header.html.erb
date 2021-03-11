@@ -4,11 +4,15 @@
       <a href="" class="logo_nav_link">Travel</a>
     </div>
     <div class="nav_item">
-      <%= link_to "Home", "/", class: "nav_item_link" %>
-      <%= link_to "Tour", "/", class: "nav_item_link" %>
-      <%= link_to "About", "/about", class: "nav_item_link" %>
-      <%= link_to "Contact", "/contact", class: "nav_item_link" %>
-      <%= link_to "Login", "/login", class: "nav_item_link" %>
+      <%= link_to t("home"), "/", class: "nav_item_link" %>
+      <%= link_to t("tour"), "/", class: "nav_item_link" %>
+      <%= link_to t("about"), "/about", class: "nav_item_link" %>
+      <%= link_to t("contact"), "/contact", class: "nav_item_link" %>
+      <% if logged_in? %>
+        <%= link_to t("logout"), logout_path, method: :delete, class: "nav_item_link" %>
+      <% else %>
+        <%= link_to t("login"), login_path, class: "nav_item_link" %>
+      <% end %>
     </div>
   </div>
 </div>
