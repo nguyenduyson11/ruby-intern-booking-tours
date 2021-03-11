@@ -1,3 +1,3 @@
 class TourType < ApplicationRecord
-  has_many :tour, dependent: :destroy
+  has_many :tours, dependent: :destroy
 end
