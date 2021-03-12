@@ -6,3 +6,6 @@ en:
   password_confirmation: "password confirmation"
   phone: "0854 083 118"
   register: "Register"
+  login: "Login"
+  login_fail: "Invalid email/password combination"
+  login_true: "Login success"
