@@ -1,0 +1,192 @@
+<div class="content_detail">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="tour_content">
+            <div class="tour_detail_title">
+              <div class="tour_detail_title_left">
+                <p class="title_left_location">da nang</p>
+                <h4 class="title_left_name">Tour di ngang da nang</h4>
+                <div class="title_left_wrap">
+                  <div class="icon_wrap">
+                    <i class="fas fa-users"></i>
+                    <span>2 <%= t("tour_person") %></span>
+                  </div>
+                  <div class="icon_wrap">
+                    <i class="far fa-clock"></i>
+                    <span>2 <%= t("tour_day") %></span>
+                  </div>
+                </div>
+              </div>
+              <div class="tour_detail_title_right">
+                <h3>$999</h3>
+              </div>
+            </div>
+           <div class="tour_img_wrap">
+            <img src="/images/image3.jpg" alt="" class="img_tour">
+           </div>
+            <div class="tour_descripton">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum possimus eius omnis tenetur incidunt animi odio nisi nobis! Reprehenderit aut rerum fugiat perspiciatis vero adipisci nostrum obcaecati delectus quibusdam neque?
+              Natus, suscipit. Saepe temporibus at eaque autem cum nemo, quos, similique natus, fugiat optio vitae ex incidunt enim sint asperiores tenetur exercitationem! Ad reiciendis quos inventore nesciunt error aspernatur ut.
+              </p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum possimus eius omnis tenetur incidunt animi odio nisi nobis! Reprehenderit aut rerum fugiat perspiciatis vero adipisci nostrum obcaecati delectus quibusdam neque?
+                Natus, suscipit. Saepe temporibus at eaque autem cum nemo, quos, similique natus, fugiat optio vitae ex incidunt enim sint asperiores tenetur exercitationem! Ad reiciendis quos inventore nesciunt error aspernatur ut.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="form_book_tour">
+            <h5><%= t("tour_tel") %> (028) 3933 8002</h4>
+            <%= form_for @book_tour, html: {class: "form_book"} do |f| %>
+              <%= f.hidden_field :tour_id, :value => 1 %>
+              <%= f.hidden_field :tour_day, :value => 5 %>
+              <div class="form_book_group">
+                  <%= f.label :start_date, t("tour_start"), class: "label_time" %>
+                  <%= f.text_field :start_date, required: true %>
+              </div>
+              <div class="form_book_group">
+                  <%= f.label :end_date, t("tour_end"), class: "label_time" %>
+                  <%= f.text_field :end_date, required: true %>
+              </div>
+              <div class="form_book_group">
+                  <%= f.label :quantity, t("tour_quatity"), class: "label_time" %>
+                  <%= f.number_field :quantity, required: true, min: 1, max: 5 %>
+              </div>
+              <div class="form_book_group">
+                  <%= f.label :customer_name, t("customer_name"), class: "label_time" %>
+                  <%= f.text_field :customer_name, required: true %>
+              </div>
+              <div class="form_book_group">
+                  <%= f.label :phone_number, t("phone"), class: "label_time" %>
+                  <%= f.telephone_field :phone_number, required: true, pattern: "[0-9]{4}[0-9]{3}[0-9]{3}",
+                   placeholder: "0854-083-118" %>
+              </div>
+              <div class="form_book_group">
+                  <%= f.label :email, t("email"), class: "label_time" %>
+                  <%= f.email_field :email, required: true%>
+              </div>
+              <div class="form_book_group_price">
+                  <span class="label_time" for="datetimepicker" ><%= t("tour_price") %></span>
+                  <span id="tour_price">4190000</span>
+                </div>
+                <p id="total_price" class="total_price_tour">12.570.000 VND</p>
+              <%= f.submit t("tour_book"), class: "btn_submit_book" %>
+          <% end %>
+          </div>
+      </div>
+    </div>
+  </div>
+  <div class="container bootstrap snippets bootdey comment_wrap">
+    <div class="row">
+        <div class="panel panel-default widget">
+            <div class="panel-heading">
+                <span class="glyphicon glyphicon-comment"></span>
+                <h3 class="panel-title">
+                    <%t("recent_coment")%></h3>
+                <span class="label label-info">
+                  <%= t("sum_comment",count: 5) %>
+                </span>
+            </div>
+            <div class="panel-body">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-xs-2 col-md-1">
+                                <img src="https://bootdey.com/img/Content/avatar/avatar1.png" class="img-circle img-responsive img-user" alt="" /></div>
+                            <div class="col-xs-10 col-md-11">
+                                <div>
+                                    <a href="#">
+                                        Google Style Login Page Design Using Bootstrap</a>
+                                    <div class="mic-info">
+                                        <%= t("by") %> <a href="#">Bhaumik Patel</a> <%= t("on") %> 2 Aug 2013
+                                    </div>
+                                </div>
+                                <div class="comment-text">
+                                    Awesome design
+                                </div>
+                                <div class="action">
+                                    <button type="button" class="btn btn-primary btn-xs" title="Edit">
+                                      <%= t("like") %>
+                                    </button>
+                                    <button type="button" class="btn btn-success btn-xs" title="Approved">
+                                      <%= t("comment") %>
+                                    </button>
+                                    <button type="button" class="btn btn-danger btn-xs" title="Delete">
+                                      <%= t("remove") %>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-xs-2 col-md-1">
+                                <img src="https://bootdey.com/img/Content/avatar/avatar7.png" class="img-circle img-responsive img-user" alt="" /></div>
+                            <div class="col-xs-10 col-md-11">
+                                <div>
+                                    <a href="#">Admin Panel Quick Shortcuts</a>
+                                    <div class="mic-info">
+                                        <%= t("by") %> <a href="#">Bhaumik Patel</a> <%= t("on") %> 11 Nov 2013
+                                    </div>
+                                </div>
+                                <div class="comment-text">
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+                                    euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim
+                                </div>
+                                <div class="action">
+                                    <button type="button" class="btn btn-primary btn-xs" title="Edit">
+                                      <%= t("like") %>
+                                    </button>
+                                    <button type="button" class="btn btn-success btn-xs" title="Approved">
+                                      <%= t("comment") %>
+                                    </button>
+                                    <button type="button" class="btn btn-danger btn-xs" title="Delete">
+                                      <%= t("remove") %>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-xs-2 col-md-1">
+                                <img src="https://bootdey.com/img/Content/avatar/avatar6.png" class="img-circle img-responsive img-user" alt="" /></div>
+                            <div class="col-xs-10 col-md-11">
+                                <div>
+                                    <a href="#">Cool Sign Up</a>
+                                    <div class="mic-info">
+                                        <%= t("by") %> <a href="#">Bhaumik Patel</a> <%= t("on") %> 11 Nov 2013
+                                    </div>
+                                </div>
+                                <div class="comment-text">
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+                                    euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim
+                                </div>
+                                <div class="action">
+                                    <button type="button" class="btn btn-primary " title="Edit">
+                                      <%= t("like") %>
+                                    </button>
+                                    <button type="button" class="btn btn-success " title="Approved">
+                                      <%= t("comment") %>
+                                    </button>
+                                    <button type="button" class="btn btn-danger " title="Delete">
+                                      <%= t("remove") %>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="input_comment">
+                  <textarea id="user_commented" >
+                  </textarea>
+                  <button type="button" class="btn btn-primary btn_comment">
+                    <%= t("comment") %>
+                  </button>
+                </div>
+                <a href="#" class="btn btn-info btn-sm btn-block" role="button"><span class="glyphicon glyphicon-refresh"></span> <%= t("more") %></a>
+            </div>
+        </div>
+    </div>
+  </div>
