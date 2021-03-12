@@ -1,0 +1,8 @@
+en:
+  user_name: "User name"
+  user_email: "Email"
+  user_phone: "Phone"
+  user_password: "password"
+  password_confirmation: "password confirmation"
+  phone: "0854 083 118"
+  register: "Register"

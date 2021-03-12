@@ -1,3 +1,11 @@
 
 en:
   title: "Travel Booking Tours"
+  register_success: "Register success"
+  register_error: "Register error"
+  form_message: "Error!"
+  count_err:
+    one: "%{count} error"
+    other: "%{count} errors"
+  enter_username: "Enter username"
+  enter_password: "Enter password"

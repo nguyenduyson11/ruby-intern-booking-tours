@@ -19,8 +19,10 @@ html,body{
 .carousel-image{
   width: 100%;
   height: 100%;
-}  
+}
 .header{
+  top: 0;
+  left: 0;
   z-index: 1;
   position: fixed;
   height: 80px;
@@ -73,4 +75,23 @@ html,body{
   background-color:#faf7fe;
   width: 100%;
   height: 100%;
+}
+.register_wrap{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.register_content{
+  margin-top: 200px;
+}
+.register_content>h1{
+  text-align: center;
+}
+.content_message{
+  transform: translateY(200px);
+  text-align: center;
+  display: flex;
+  justify-content: center;
 }
