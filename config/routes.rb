@@ -8,5 +8,8 @@ Rails.application.routes.draw do
     resources :tour, only: %i(index show )
     resources :users, only: %i(new create )
     resources :book_tours, only: %i(create )
+    namespace :admin do
+      resources :book_tours, :index
+    end
   end
 end

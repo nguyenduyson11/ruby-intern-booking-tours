@@ -9,3 +9,13 @@ en:
   login: "Login"
   login_fail: "Invalid email/password combination"
   login_true: "Login success"
+  setting: "Setting"
+  update_user: "Update user"
+  update_password: "Update password"
+  add_tour: "Add tour"
+  statistical: "Statistical"
+  list_tour: "List tour"
+  tour: "Tour"
+  delete: "Delete"
+  admin_fail: "You are not an administrator"
+

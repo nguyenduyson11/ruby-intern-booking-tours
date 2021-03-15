@@ -1,0 +1,15 @@
+
+<tr>
+  <th scope="row"><%= count_stt(params[:page] ? params[:page].to_i : 1, book_tour_counter) %></th>
+  <td><%= book_tour.title %></td>
+  <td><%= book_tour.customer_name %></td>
+  <td><%= book_tour.phone_number %></td>
+  <td><%= book_tour.start_date %></td>
+  <td><%= book_tour.end_date %></td>
+  <td><%= link_to book_tour.status, admin_book_tour_path(book_tour), method: :patch %></td>
+  <td><%= book_tour.created_at %></td>
+  <td>
+    <td><%= link_to t("delete"), admin_book_tour_path(book_tour),
+      method: :delete, class: "btn btn-danger" %></td>
+  </td>
+</tr>

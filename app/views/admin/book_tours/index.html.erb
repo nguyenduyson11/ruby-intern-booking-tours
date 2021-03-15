@@ -1,0 +1,32 @@
+<div class="container-admin">
+  <div class="user-content">
+    <div class="user-content-table">
+      <div class="content-table-container">
+        <h1 class="content-table-container-header">
+          <%= t("list_book_tour") %>
+        </h1>
+        <div class="content-table-container-list">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>STT</th>
+                <th><%= t("title_tour") %></th>
+                <th><%= t("customer_name") %></th>
+                <th><%= t("customer_phone") %></th>
+                <th><%= t("tour_start") %></th>
+                <th><%= t("tour_end") %></th>
+                <th><%= t("status") %></th>
+                <th><%= t("create_at") %></th>
+                <th colspan="2"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <%= render @book_tours %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<p><%= will_paginate @book_tours %></p>
