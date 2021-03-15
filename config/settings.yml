@@ -1,4 +1,8 @@
  user:
+  wait: 0
+  accept: 1
+  begin: 2
+  close: 3
   number : 1
   panigate_size: 6
   email:

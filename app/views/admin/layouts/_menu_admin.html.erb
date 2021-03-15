@@ -1,0 +1,26 @@
+<div class="menu-user-left">
+  <div class="user-left-nav">
+    <div class="user-left-nav-name">
+      <a href="">
+        <img class="user-left-nav-img" src="" style="width: 50px; height: 50px;" />
+      </a>
+      <span><%= current_user.name %></span>
+    </div>
+  </div>
+  <div class="user-left-items">
+    <h4 class="user-left-item-title">
+      <%= t("setting") %>
+    </h4>
+    <%= link_to t("update_user"), "#", class: "user-left-item" %>
+    <%= link_to t("password"), "#", class: "user-left-item" %>
+    <%= link_to t("logout"), "#", class: "user-left-item" %>
+  </div>
+  <div class="user-left-items">
+    <h4 class="user-left-item-title">
+      <%= t("tour") %>
+    </h4>
+    <%= link_to t("list_tour"), "#", class: "user-left-item" %>
+    <%= link_to t("add_tour"), "#", class: "user-left-item" %>
+    <%= link_to t("statistical"), "#", class: "user-left-item" %>
+  </div>
+</div>

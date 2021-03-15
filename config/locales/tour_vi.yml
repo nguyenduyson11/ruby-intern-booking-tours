@@ -54,3 +54,6 @@ vi:
     other: "%{count} Người"
   not_activated: "chưa kích hoạt"
   not_find_tour: "Không tìm thấy tour!"
+  remove_tour_success: "Xóa đặt chỗ thành công!"
+  remove_tour_error: "Xóa thất bại!"
+  tour_name: "Tên du lịch"
