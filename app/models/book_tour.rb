@@ -15,7 +15,9 @@ class BookTour < ApplicationRecord
   before_create :date_start
   validate :date_end
   delegate :title, to: :tour
-  scope :sort_tour, ->{order(created_at: :desc)}
+  delegate :name, to: :user
+  scope :active, ->{where(deleted: false)}
+  scope :newest, ->{active.order(created_at: :desc)}
 
   def date_end
     return if end_date >= start_date

@@ -35,3 +35,6 @@ en:
   close: "Close"
   update_success: "Update success"
   update_error: "Update error"
+  email_remove_booking: "We have deleted your booking"
+  booking_tour: "Booking tour"
+  hi: "Hi"

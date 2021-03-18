@@ -1,0 +1,13 @@
+<h1>Hi <%= @book_tour.name %></h1>
+<p>
+  <%= t("email_remove_booking") %>
+  <%= @book_tour.title %>
+</p>
+<p>
+  <%= t("tour_start")  %>
+  <%= l(@book_tour.start_date, format: :default) %>
+</p>
+<p>
+  <%= t("tour_end") %>
+  <%= l(@book_tour.end_date, format: :default) %>
+</p>

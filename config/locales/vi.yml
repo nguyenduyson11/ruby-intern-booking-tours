@@ -43,3 +43,6 @@ vi:
   close: "Đóng"
   update_success: "Cập nhật thành công"
   update_error: "Cập nhật thất bại"
+  email_remove_booking: "chúng tôi đã xóa lịch đặt  của bạn"
+  booking_tour: "Đặt tour"
+  hi: "Xin chào"
