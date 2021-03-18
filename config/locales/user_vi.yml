@@ -9,3 +9,4 @@ vi:
   login: "Đăng nhập"
   login_fail: "Tài khoản hoặc mật khẩu sai"
   login_true: "Đăng nhập thành công"
+  admin_fail: "Bạn không phải người quản trị"
