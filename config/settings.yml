@@ -5,3 +5,5 @@
     default: "nguyenduyson60@example.com"
     layout: "mailer"
     max_length: 255
+ min_number: 1
+ min_quantity: 0

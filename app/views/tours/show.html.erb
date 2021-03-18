@@ -37,10 +37,10 @@
         </div>
         <div class="col-lg-4">
           <div class="form_book_tour">
-            <h5><%= t("tour_tel") %> (028) 3933 8002</h4>
-            <%= form_for @book_tour, html: {class: "form_book"} do |f| %>
-              <%= f.hidden_field :tour_id, :value => 1 %>
-              <%= f.hidden_field :tour_day, :value => 5 %>
+            <h5><%= t("tour_tel") %> (028) 3933 8002</h5>
+            <%= form_for @book_tour, remote: true, html: {class: "form_book"} do |f| %>
+              <%= f.hidden_field :tour_id, value: 2 %>
+              <%= f.hidden_field :tour_day, value: 5 %>
               <div class="form_book_group">
                   <%= f.label :start_date, t("tour_start"), class: "label_time" %>
                   <%= f.text_field :start_date, required: true %>
@@ -51,7 +51,7 @@
               </div>
               <div class="form_book_group">
                   <%= f.label :quantity, t("tour_quatity"), class: "label_time" %>
-                  <%= f.number_field :quantity, required: true, min: 1, max: 5 %>
+                  <%= f.number_field :quantity, required: true, min: Settings.min_number, max: 5 %>
               </div>
               <div class="form_book_group">
                   <%= f.label :customer_name, t("customer_name"), class: "label_time" %>
@@ -60,7 +60,7 @@
               <div class="form_book_group">
                   <%= f.label :phone_number, t("phone"), class: "label_time" %>
                   <%= f.telephone_field :phone_number, required: true, pattern: "[0-9]{4}[0-9]{3}[0-9]{3}",
-                   placeholder: "0854-083-118" %>
+                  placeholder: "0854-083-118" %>
               </div>
               <div class="form_book_group">
                   <%= f.label :email, t("email"), class: "label_time" %>
@@ -72,7 +72,7 @@
                 </div>
                 <p id="total_price" class="total_price_tour">12.570.000 VND</p>
               <%= f.submit t("tour_book"), class: "btn_submit_book" %>
-          <% end %>
+            <% end %>
           </div>
       </div>
     </div>

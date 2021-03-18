@@ -24,3 +24,13 @@ vi:
   list_tour: "Danh sách tour"
   tour: "Chuyến du lịch"
   delete: "Xóa"
+  not_found_tour: "không tìm thấy tour"
+  book_sucsess: "Đặt tour thành công"
+  book_error: "Đặt tour thất bại!"
+  login_message: "Vui lòng đăng nhập"
+  time:
+    formats:
+      own: "%H:%M:%S, %d %B"
+      default: "%d-%m-%Y"
+      long: "%d %B, %Y"
+      short: "%d %b"

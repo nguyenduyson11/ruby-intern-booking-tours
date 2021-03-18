@@ -1,5 +1,5 @@
 var day_current = new Date();
-var month = day_current.getMonth()+1;
+var month = day_current.getMonth()+2;
 var year = day_current.getFullYear();
 var day_of = new Date(year,month,0);
 var date = day_of.getDate();
@@ -10,7 +10,6 @@ document.addEventListener("turbolinks:load", () => {
     timepicker:false,
     format: 'd/m/Y',
     minDate: '+1970/01/02',
-    maxDate: '2021/03/28',
     maxDate: `${year}/${month}/${date}`,
     onChangeDateTime:function(dp,$input){
       const day = $('#book_tour_tour_day').val();

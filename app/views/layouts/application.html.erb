@@ -11,8 +11,8 @@
     <%= javascript_pack_tag "application", "data-turbolinks-track": "reload" %>
   </head>
   <body>
-  <%= render "layouts/header" %>
-  <section class="content" style="min-height: auto;">
+    <%= render "layouts/header" %>
+    <section class="content" style="min-height: auto;">
       <% flash.each do |key, value| %>
         <div class="row content_message">
           <div class="alert alert-<%= key %>">
@@ -21,7 +21,7 @@
         </div>
       <% end %>
       <%= render "shared/error_messages" %>
-  </section>
-  <%= yield %>
+    </section>
+    <%= yield %>
   </body>
 </html>

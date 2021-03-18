@@ -1,0 +1,10 @@
+<% @book_tours.each_with_index do |book_tour,index| %>
+  <tr>
+    <th scope="row"><%= count index %></th>
+    <td><%= link_to book_tour.title, tour_path(book_tour) %></td>
+    <td><%= book_tour.quantity %></td>
+    <td><%= l(book_tour.start_date, format: :default) %></td>
+    <td><%= l(book_tour.end_date, format: :default) %></td>
+    <td><%= book_tour.actived? ? t("not_activated") : t("activated") %></td>
+  </tr>
+<% end %>

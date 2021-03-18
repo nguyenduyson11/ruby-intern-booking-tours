@@ -16,3 +16,13 @@ en:
   contact: "Contact"
   by: "By"
   on: "on"
+  not_found_tour: "not found tour"
+  book_sucsess: "Booking success"
+  book_error: "Booking fail!"
+  login_message: "Please login "
+  time:
+    formats:
+      own: "%H:%M:%S, %d %B"
+      default: "%d-%m-%Y"
+      long: "%d %B, %Y"
+      short: "%d %b"
