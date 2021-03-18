@@ -1,0 +1,24 @@
+<div class="col-lg-6 mb-4">
+  <%= link_to tour_path(tour), class: "link_card" do  %>
+    <div class="card_wrap">
+      <div class="row">
+        <div class="col-lg-5 card_wrapper">
+          <img class="img_card" src="/images/card_1.jpg">
+        </div>
+        <div class="col-lg-7 card_wrapper">
+          <div class="card_content">
+            <h4><%= tour.title %></h4>
+            <p><%= t("tour_day", count: tour.day) %>, <%= t("tour_night", count: tour.day) %></p>
+            <div class="card_content_price">
+              <span class="price_text"><%= t("tour_start") %></span>
+              <span class="price_number"><%= tour.price %></span>
+            </div>
+            <div class="card_content_des">
+              <%= tour.description %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

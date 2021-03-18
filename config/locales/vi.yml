@@ -34,3 +34,7 @@ vi:
       default: "%d-%m-%Y"
       long: "%d %B, %Y"
       short: "%d %b"
+  modal_title: "Thông báo"
+  close: "Đóng"
+  please_login: "Vui lòng đăng nhập để đặt tour du lịch"
+

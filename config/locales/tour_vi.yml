@@ -4,8 +4,12 @@ vi:
   tour_title: "Danh sách các Tour"
   tour_placeholder: "Bạn muốn đi đâu?"
   tour_search: "Tìm kiếm"
-  tour_day: "Ngày"
-  tour_night: "Đêm"
+  tour_day:
+    one: "%{count} Ngày"
+    other: "%{count} Ngày"
+  tour_night:
+    one: "%{count} Đêm"
+    other: "%{count} Đêm"
   tour_start: "Bắt đầu từ"
   tour_often: "Chuyến du lịch"
   tour_person: "Người"
@@ -45,3 +49,8 @@ vi:
   booking_sucsses: "Đặt tour thành công"
   err_day_end: "Ngày kết thúc phải lớn hơn hoặc bằng ngày bắt đầu"
   err_day_start: "Ngày bắt đầu phải lớn hơn ngày hiện tại ít nhất một ngày"
+  tour_person:
+    one: "%{count} Người"
+    other: "%{count} Người"
+  not_activated: "chưa kích hoạt"
+  not_find_tour: "Không tìm thấy tour!"

@@ -26,3 +26,6 @@ en:
       default: "%d-%m-%Y"
       long: "%d %B, %Y"
       short: "%d %b"
+  modal_title: "Notification"
+  close: "Close"
+  please_login: "Please login to book tour"
