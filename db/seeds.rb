@@ -38,3 +38,9 @@ end
                description: description,
                quatity: quantity)
 end
+5.times do |i|
+  Review.create!(user_id: 1,
+                 tour_id:2,
+                 content: "",
+                 like: 0)
+end

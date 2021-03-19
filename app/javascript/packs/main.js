@@ -5,7 +5,6 @@ var day_of = new Date(year,month,0);
 var date = day_of.getDate();
 document.addEventListener("turbolinks:load", () => {
   var price = parseFloat($('#tour_price').text());
-  console.log(price)
   $('#book_tour_start_date').datetimepicker({
     timepicker:false,
     format: 'd/m/Y',
@@ -24,7 +23,7 @@ document.addEventListener("turbolinks:load", () => {
   $('#book_tour_quantity').on('change',(e)=>{
     var number = parseInt(e.target.value);
     $('#total_price').text(total_price(price,number));
-  }) ;
+  });
 });
 function nextday(date,step){
   var day = new Date(date);

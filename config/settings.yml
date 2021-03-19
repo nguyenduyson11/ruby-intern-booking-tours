@@ -1,6 +1,6 @@
  user:
   number : 1
-  panigate_size: 5
+  panigate_size: 6
   email:
     default: "nguyenduyson60@example.com"
     layout: "mailer"
