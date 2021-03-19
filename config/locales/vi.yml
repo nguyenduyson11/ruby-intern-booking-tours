@@ -37,4 +37,9 @@ vi:
   modal_title: "Thông báo"
   close: "Đóng"
   please_login: "Vui lòng đăng nhập để đặt tour du lịch"
-
+  wait: "Chờ đợi"
+  accept: "Chấp nhận"
+  begin: "Bắt đầu"
+  close: "Đóng"
+  update_success: "Cập nhật thành công"
+  update_error: "Cập nhật thất bại"

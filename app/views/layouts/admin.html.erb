@@ -11,6 +11,16 @@
     <%= javascript_pack_tag "application", "data-turbolinks-track": "reload" %>
   </head>
   <body>
+    <section class="content flash_message" style="min-height: auto;">
+      <% flash.each do |key, value| %>
+        <div class="content_flash">
+          <div class="alert alert-<%= key %>">
+            <%= value %>
+          </div>
+        </div>
+      <% end %>
+      <%= render "shared/error_messages" %>
+    </section>
     <div class="container-fluid">
       <div class="row">
         <div class="col-lg-2">

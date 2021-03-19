@@ -52,7 +52,6 @@ html,body{
   align-items: center;
 }
 .nav_item>a{
-
   text-decoration: none;
   color:black;
   font-size: 18px;
@@ -284,4 +283,38 @@ html,body{
   background-color: #3498db;
   color: #d1f3ff;
   border: 1px solid black;
+}
+.status{
+  width: 100%;
+  display: block;
+  text-decoration: none;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 30px;
+}
+.status:hover{
+  text-decoration: none;
+  color: black;
+}
+.status-wait{
+  background-color: #ffc107;
+}
+.status-accept{
+  background-color: #0d6efd;
+  color: white;
+}
+.status-begin{
+  background-color: #23aa6c;
+}
+.status-close{
+  background-color: #e84353;
+  color: white;
+
+}
+.flash_message{
+  height:50px;
+  width: 100%;
+  text-align: center;
 }

@@ -6,7 +6,12 @@
   <td><%= book_tour.phone_number %></td>
   <td><%= book_tour.start_date %></td>
   <td><%= book_tour.end_date %></td>
-  <td><%= link_to book_tour.status, admin_book_tour_path(book_tour), method: :patch %></td>
+  <%= form_tag admin_book_tour_path(book_tour), method: :patch do %>
+    <td>
+      <%= select_tag :status, options_for_select(value_select_tag, selected(book_tour.status)),
+        onchange: "this.form.submit();", disabled: book_tour.close? %>
+    </td>
+  <% end %>
   <td><%= book_tour.created_at %></td>
   <td>
     <td><%= link_to t("delete"), admin_book_tour_path(book_tour),

@@ -53,3 +53,6 @@ en:
   booking_sucsses: "Booking success"
   err_day_end: "end day must be to or by start date"
   err_day_start: "The start date must be at least one day greater than the current date"
+  remove_tour_success: "Remove tour success!"
+  remove_tour_error: "Remove tour error!"
+  tour_name: "Tour name"
