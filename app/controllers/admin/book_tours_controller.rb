@@ -1,8 +1,8 @@
 class Admin::BookToursController < Admin::AdminController
-  before_action :find_book_tour, only: :update
+  before_action :find_book_tour, only: %i(update destroy)
 
   def index
-    @book_tours = BookTour.sort_tour
+    @book_tours = BookTour.newest
                           .paginate(page: params[:page],
       per_page: params[:per_page] || Settings.user.panigate_size)
   end
@@ -12,14 +12,23 @@ class Admin::BookToursController < Admin::AdminController
       @book_tour.status = params[:status].to_i
       if @book_tour.save
         flash[:success] = t "update_success"
-        redirect_to admin_book_tours_path
       else
-        flash.now[:error] = t "update_error"
-        render :index
+        flash[:error] = t "update_error"
       end
+      redirect_to admin_book_tours_path
     end
   rescue ArgumentError
     flash[:error] = t "update_error"
+    redirect_to admin_book_tours_path
+  end
+
+  def destroy
+    if @book_tour.update_column(:deleted, Settings.user.deleted)
+      MailerMailer.send_email_user(@book_tour).deliver
+      flash[:success] = t "remove_tour_success"
+    else
+      flash[:error] = t "remove_tour_error"
+    end
     redirect_to admin_book_tours_path
   end
 
